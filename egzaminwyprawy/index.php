@@ -67,11 +67,29 @@ $conn = mysqli_connect("localhost","root","","wyprawyegz");
                 <h4>Koszt wycieczki</h4>
                 <?php
                 if($_SERVER['REQUEST_METHOD'] === 'POST'){
-                    $dorosli = $_POST['Ldoroslych'];
-                    $dzieci = $_POST['Ldzieci'];
+                    $dorosli = (int)$_POST['Ldoroslych'];
+                    $dzieci = (int)$_POST['Ldzieci'];
                     $datka = $_POST['dataa'];
                     
-                    $sql2 = "SELECT cena FROM miejsca"
+                    $sql2 = "SELECT nazwa, cena FROM miejsca WHERE nazwa = '$miejsce'";
+
+                    $wyliczanie = mysqli_query($conn, $sql2);
+
+                    while ($rou = mysqli_fetch_assoc($wyliczanie)) {
+                        $cenka = $rou['cena'];
+                        $miejscowka = $rou['nazwa'];
+                        
+                        $cenadorosli = $dorosli * $cenka;
+                        $cenadzieci = $dzieci * $cenka;
+                        $cdzieci = $cenadzieci / 2;
+                        $wacznie = $cdzieci + $cenadorosli;
+
+                        echo "<p>W dniu:$datka</p>";
+                        echo"<p>$wacznie złotych</p>";
+
+                    };
+
+
                 }
 
 
@@ -84,7 +102,27 @@ $conn = mysqli_connect("localhost","root","","wyprawyegz");
         </aside>
         <section>
             <h3>Wycieczki</h3>
+            <?php
 
+            $sql3 = "SELECT nazwa, cena, link_obraz FROM miejsca WHERE link_obraz LIKE '0%'";
+            $rezultat = mysqli_query($conn, $sql3);
+
+            while ($roww = mysqli_fetch_assoc($rezultat)) {
+                $nazwa = $roww['nazwa'];
+                $zdjecie = $roww['link_obraz'];
+                $cena = $roww['cena'];
+
+                echo "<div class='wycieczka'>   
+                     <img src='pliki/$zdjecie' alt='zdjęcie z wycieczki'>
+                     <h2>$nazwa</h2>
+                     <p>$cena</p>
+                     </div>";
+            }
+
+
+
+
+            ?>
         </section>
     </main>
     <footer>

@@ -1,0 +1,51 @@
+*{
+    font-family: Garamond;
+    text-align: center;
+}
+header, footer{
+    background-color: skyblue;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 20px;
+}
+div{
+    
+    width: 30%;
+}
+a{
+    display: block;
+    background-color: dodgerblue;
+    color: white;
+    width: 65%;
+    font-size: 130%;
+    margin: 10px;
+    text-decoration: none;
+}
+a:hover{
+    background-color: royalblue;
+}
+section{
+    width: 70%;
+    height: 300px;
+    overflow-y: auto;
+}
+main{
+    display: flex;
+    flex-direction: row;
+}
+article{
+    background-color: aliceblue;
+    height: 280px;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 20px;
+}
+img{
+    margin: 4px; 
+    float: left;
+}
+table{
+    width: 90%;
+    border: 1px dotted black;
+    
+}

@@ -1,0 +1,5 @@
+SELECT idKontynent , nazwa FROM kontynenty
+SELECT nazwa, wartoscCechy, plik FROM obiekty WHERE idRodzaj = 10
+SELECT idObiekt, panstwo, nazwa , wartoscCechy FROM obiekty WHERE idRodzaj = 10 AND idKontynent = 6
+INSERT INTO osiagniecia (idOsiagniecie, idObiekt, idTurysta) VALUES (NULL, 34, 2)
+SELECT idTurysta, nick FROM turysci

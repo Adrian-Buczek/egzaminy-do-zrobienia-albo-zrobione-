@@ -1,0 +1,50 @@
+*{
+    font-family: Verdana;
+    background-color: #D4F1F4;
+    color: #05445E;
+}
+.heder{
+    width: 50em;
+    margin: auto;
+    padding: 20px;
+}
+footer{
+    text-align: right;
+}
+header{
+    margin: 40px;
+
+}
+.ztabelom{
+    margin: 40px;
+    padding: 20px;
+}
+.mejn, header, .ztabelom{
+    background-color: #75E6DA;
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px lightblue;
+}
+h1,h2, form{
+    text-align: center;
+}
+form{
+    margin: 10px;
+}
+button{
+    width: 14em;
+}
+table, tr{
+    border: 1px solid #189AB4;
+
+}
+td,th{
+    padding: 10px;
+
+}
+a{
+    text-decoration: none;
+}
+tr:hover{
+    background-color: white;
+    opacity: 0.8;
+}

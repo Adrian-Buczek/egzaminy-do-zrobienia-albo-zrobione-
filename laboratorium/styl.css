@@ -3,19 +3,27 @@
     background-color: #D4F1F4;
     color: #05445E;
 }
+body{
+    margin: 0 auto;
+}
 .heder{
+    
     width: 50em;
     margin: auto;
     padding: 20px;
 }
 footer{
     text-align: right;
+    
 }
 header{
     margin: 40px;
-
+    width: 90%;
 }
 .ztabelom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 40px;
     padding: 20px;
 }
@@ -23,6 +31,14 @@ header{
     background-color: #75E6DA;
     border-radius: 5px;
     box-shadow: 10px 10px 5px lightblue;
+}
+
+.mejn{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 20em;
+    margin: 0 auto;
 }
 h1,h2, form{
     text-align: center;
@@ -32,6 +48,9 @@ form{
 }
 button{
     width: 14em;
+}
+table{
+    width: 70%;
 }
 table, tr{
     border: 1px solid #189AB4;

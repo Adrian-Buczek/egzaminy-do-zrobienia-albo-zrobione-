@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    $_SESSION['login'] = $_POST['login'];
+    $_SESSION['haslo'] = $_POST['haslo'];
+}
+if(isset($_SESSION['login']) && isset($_SESSION['haslo'])){
+
+    if($_SESSION['login'] == "admin" && $_SESSION['haslo'] == "TajneHaslo321*"){
+        header("Location: wyniki.php");
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -11,11 +25,17 @@
         <h1>Portal laboratorium</h1>
     </header>
     <main class="mejn">
-        <label for="login">Login:</label>
-        <input type="text" name="login">
-        <label for="haslo">Hasło:</label>
-        <input type="password" name="haslo">
-        <button name="baton">Zaloguj</button>
+        <form method='POST'>
+
+            <h2>Zaloguj się do systemu</h2>
+            <label for="login">Login:
+                <input type="text" name="login">
+            </label>
+            <label for="haslo">Hasło:
+                <input type="password" name="haslo">
+            </label>
+            <button name="baton">Zaloguj</button>
+        </form>
 
     </main>
     <footer>

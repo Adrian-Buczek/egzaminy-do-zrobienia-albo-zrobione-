@@ -1,0 +1,47 @@
+*{
+    font-family: Georgia;
+    margin: 0;
+    padding: 0;
+}
+header, footer{
+    background-color: forestgreen;
+    color: white;
+    padding: 2px;
+    text-align: center;
+}
+nav{
+    flex-direction: row;
+    background-color: darkkhaki; 
+    height: 150px; 
+    overflow: hidden;
+
+}
+div, section{
+    background-color: khaki;
+    width: 40%;
+    height: 400px;
+
+}
+div > img{
+    padding: 2px;
+    margin: 20px;
+    border: 2px dotted forestgreen;
+    border-radius: 40px;
+
+}
+p{
+    font-size: 120%;
+    font-style: italic;
+}
+main{
+    display: flex;
+    flex-direction: row;
+}
+footer{
+    display: flex;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
